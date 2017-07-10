@@ -3,6 +3,7 @@ import {RECEIVE_TODO} from '../actions/todo_actions';
 
 
 export default (state = {}, action) => {
+  Object.freeze(state);
   switch(action.type){
 
     case RECEIVE_TODOS: return [...state, action.todos];
