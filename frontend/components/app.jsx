@@ -1,4 +1,12 @@
-ReactDOM.render(<App />, rootElement);
+import React from 'react';
+import TodoListContainer from './todo_list/todo_list_container';
 
 
-const App = '<h1> Named App </h1>';
+const App = () => (
+  <div>
+    <h1> Named App </h1>
+    <TodoListContainer  / >
+  </div>
+);
+
+export default App;
