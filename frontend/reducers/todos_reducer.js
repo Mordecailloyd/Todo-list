@@ -15,6 +15,7 @@ export default (state = {}, action) => {
       return newstate;
     }
     case REMOVE_TODO:{
+      // debugger;
       delete newstate[action.id];
       return newstate;
     }

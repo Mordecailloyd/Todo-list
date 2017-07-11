@@ -8,7 +8,8 @@ class TodoForm extends React.Component {
     this.state = {
       title: "",
       body: "",
-      id: ''
+      id: '',
+      done: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }

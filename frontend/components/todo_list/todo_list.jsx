@@ -8,9 +8,9 @@ const TodoList = ({todos, receiveTodo, removeTodo})  =>{ //be aware of {}
   return (
     <ul>
       {
-        todos.map(({title,id}) => (
-          <li key={id}>
-            <TodoListItem title={title} id={id} removeTodo={removeTodo}/>
+        todos.map((todo) => (
+          <li key={todo.id}>
+            <TodoListItem todo={todo} removeTodo={removeTodo} receiveTodo={receiveTodo}/>
           </li>
         ))
       }
