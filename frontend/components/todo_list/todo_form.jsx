@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {uniqueId} from '../../util/unique_id';
 
 
 class TodoForm extends React.Component {
@@ -7,21 +7,23 @@ class TodoForm extends React.Component {
     super(props);
     this.state = {
       title: "",
-      body: ""
+      body: "",
+      id: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit (e) {
     e.preventDefault();
-    console.log(this);
-    this.props.receiveTodo(this.state);
-    console.log(this.props);
+    const todo = Object.assign({}, this.state);
+    // console.log(this);
+    todo.id = uniqueId();
+    this.props.receiveTodo(todo);
   }
 
   update (property) {
     return (event)=>{
-      this.setState([{[property]: event.target.value}]);
+      this.setState({[property]: event.target.value});
     };
   }
 

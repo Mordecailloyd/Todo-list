@@ -3,13 +3,16 @@ import React from 'react';
 import TodoListItem from './todo_list_item';
 import TodoForm from './todo_form';
 
-const TodoList = ({todos, receiveTodo})  =>{ //be aware of {}
+const TodoList = ({todos, receiveTodo, removeTodo})  =>{ //be aware of {}
   // let titlearr = Object.keys(todos).map(title => todos[title]);
   return (
     <ul>
       {
-        todos.map(({title}, i) => (
-          <TodoListItem title={title} i={i} />
+        todos.map(({title,id}, i) => (
+          <li>
+            <TodoListItem key={id}  title={title} i={i} />
+            <
+          </li>
         ))
       }
       <li>
