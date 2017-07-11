@@ -11,7 +11,7 @@ const TodoList = ({todos, receiveTodo, removeTodo})  =>{ //be aware of {}
         todos.map(({title,id}, i) => (
           <li>
             <TodoListItem key={id}  title={title} i={i} />
-            <
+            <button onClick={removeTodo} ></button>
           </li>
         ))
       }
