@@ -8,10 +8,9 @@ const TodoList = ({todos, receiveTodo, removeTodo})  =>{ //be aware of {}
   return (
     <ul>
       {
-        todos.map(({title,id}, i) => (
-          <li>
-            <TodoListItem key={id}  title={title} i={i} />
-            <button onClick={removeTodo} ></button>
+        todos.map(({title,id}) => (
+          <li key={id}>
+            <TodoListItem title={title} id={id} removeTodo={removeTodo}/>
           </li>
         ))
       }

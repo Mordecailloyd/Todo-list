@@ -13,9 +13,9 @@ export default (state = {}, action) => {
     case RECEIVE_TODO:{
       newstate[action.todo.id] = action.todo;
       return newstate;
-        }
+    }
     case REMOVE_TODO:{
-      delete newstate[action.todo.id];
+      delete newstate[action.id];
       return newstate;
     }
     default: return state;
